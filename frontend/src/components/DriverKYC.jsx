@@ -51,8 +51,8 @@ const DriverKYC = () => {
       const response = await axios.post('https://ind.idv.hyperverge.co/v1/readId', formData, {
         headers: {
           'content-type': 'multipart/form-data',
-          appId: 'vivemk',
-          appKey: 'po5v04f7kxolzeo4cbh1',
+          appId: process.env.REACT_APP_ID,
+          appKey: process.env.REACT_APP_KEY,
           transactionId: 'DL_VALIDATION_' + Date.now(),
         },
       });
@@ -88,8 +88,8 @@ const DriverKYC = () => {
       const responseID = await axios.post('https://ind.idv.hyperverge.co/v1/readId', formDataID, {
         headers: {
           'content-type': 'multipart/form-data',
-          appId: 'vivemk',
-          appKey: 'po5v04f7kxolzeo4cbh1',
+          appId: process.env.REACT_APP_ID,
+          appKey: process.env.REACT_APP_KEY,
           transactionId: 'ID_VALIDATION_' + Date.now(),
         },
       });
@@ -143,8 +143,8 @@ const DriverKYC = () => {
       const responseSelfie = await axios.post('https://ind.idv.hyperverge.co/v1/checkLiveness', formDataSelfie, {
         headers: {
           'content-type': 'multipart/form-data',
-          appId: 'vivemk',
-          appKey: 'po5v04f7kxolzeo4cbh1',
+          appId: process.env.REACT_APP_ID,
+          appKey: process.env.REACT_APP_KEY,
           transactionId: 'SELFIE_VALIDATION_' + Date.now(),
         },
       });
@@ -174,8 +174,8 @@ const DriverKYC = () => {
       const responseMatch = await axios.post('https://ind.idv.hyperverge.co/v1/matchFace', formDataMatch, {
         headers: {
           'content-type': 'multipart/form-data',
-          appId: 'vivemk',
-          appKey: 'po5v04f7kxolzeo4cbh1',
+          appId: process.env.REACT_APP_ID,
+          appKey: process.env.REACT_APP_KEY,
           transactionId: 'FACE_MATCH_' + Date.now(),
         },
       });
